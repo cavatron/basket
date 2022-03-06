@@ -21,7 +21,7 @@
         <div>Rows</div>
         <input type="number" v-model="state.rows" />
       </div>
-      <div class="input">
+      <div class="input last">
         <div>Columns</div>
         <input type="number" v-model="state.columns" />
       </div>
@@ -44,7 +44,6 @@ const state = reactive({
 
 <style scoped>
 .page {
-  padding: 50px;
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -68,5 +67,21 @@ const state = reactive({
 .input div {
   width: auto;
   min-width: 60px;
+}
+
+.input.last {
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .page {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .input.last {
+    margin-bottom: 20px;
+    margin-right: 0;
+  }
 }
 </style>

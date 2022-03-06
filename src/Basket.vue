@@ -81,6 +81,6 @@ export default {
   background-color: #88ffef;
   width: 50px;
   height: 50px;
-  position: absolute;
+  position: fixed;
 }
 </style>
